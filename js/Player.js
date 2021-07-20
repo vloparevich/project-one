@@ -3,7 +3,6 @@ class Player extends Component {
         super(obj, x, y, imgSrc);
         this.width = this.img.width / 2.5;
         this.height = this.img.height / 2.5;
-
     }
 
     move() {
@@ -23,13 +22,13 @@ class Player extends Component {
                     }
                     break;
                 case 'ArrowDown':
-                case 'KeyW':
+                case 'KeyS':
                     if (this.y < this.that.canvas.height - this.height - 50) {
                         this.y += 50;
                     }
                     break;
                 case 'ArrowUp':
-                case 'KeyS':
+                case 'KeyW':
                     if (this.y > 95) {
                         this.y -= 50;
                     }
@@ -38,5 +37,23 @@ class Player extends Component {
                     console.log("no direction set")
             }
         })
+    }
+
+    isCollidedObject(obj) {
+        if (this.x > obj.x &&
+            this.x < obj.x + obj.width &&
+            ((this.y > obj.y && this.y < obj.y + obj.height) ||
+                (this.y + this.height > obj.y &&
+                    this.y + this.height < obj.y + obj.height))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    startingPoint() {
+        this.x = this.canvasWidth / 2;
+        this.y = this.canvasHeight - 150;
+
     }
 }

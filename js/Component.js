@@ -15,4 +15,7 @@ class Component {
     drawComponent = () => {
         this.that.context.drawImage(this.img, this.x, this.y, this.width, this.height);
     }
+
+
+
 }

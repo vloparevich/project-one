@@ -5,16 +5,15 @@ class Car extends Component {
         this.height = this.img.height * 0.65
         this.yPlusHeight = this.height + y;
         this.speed = Math.random() * 5 + 5;
-        this.dynamicX = Math.random() * -this.that.canvasWidth;
+        this.x = Math.random() * -this.that.canvasWidth;
     }
 
-
     carMoving() {
-        this.dynamicX += this.speed;
-        if (this.dynamicX >= this.canvasWidth) {
-            this.dynamicX = Math.random() * -this.that.canvasWidth;
+        this.x += this.speed;
+        if (this.x >= this.canvasWidth) {
+            this.x = Math.random() * -this.that.canvasWidth;
             this.speed = Math.random() * 5 + 5;
         }
-        this.that.context.drawImage(this.img, this.dynamicX, this.y, this.width, this.height);
+        this.that.context.drawImage(this.img, this.x, this.y, this.width, this.height);
     }
 }

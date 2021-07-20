@@ -20,7 +20,7 @@
 .btn.btn-success {
     font-size: 2rem;
     border: 12px inset rgba(20, 233, 135, 0.66);
-    border-radius: 0px 40px 40px 40px;
+    border-radius: 0px 25px 25px 25px;
 }
 
 .hidden {
