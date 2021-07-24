@@ -14,28 +14,34 @@
 <body>
     <div class="game-intro">
         <br />
-        <img src="./images/arrows.png" alt="" class="arrows-img" />
     </div>
     <div id="game-board" class="success">
+        <video width="312" height="205" autoplay muted loop id="myVideo">
+            <source src="./video/intro.mov" type="video/mp4">
+        </video>
         <div class="landing-page">
-            <button type="button" class="btn btn-success">START</button>
+            <button type="button" class="btn btn-success">PLAY</button>
         </div>
         <canvas id="canvas" width="1200" height="800"></canvas>
     </div>
-    <script type="text/javascript" src="js/Component.js"></script>
-    <script type="text/javascript" src="js/Crystal.js"></script>
-    <script type="text/javascript" src="js/Lives.js"></script>
-    <script type="text/javascript" src="js/Player.js"></script>
-    <script type="text/javascript" src="js/Sky.js"></script>
-    <script type="text/javascript" src="js/Sun.js"></script>
-    <script type="text/javascript" src="js/Clouds.js"></script>
-    <script type="text/javascript" src="js/GrassFooter.js"></script>
-    <script type="text/javascript" src="js/Road.js"></script>
-    <script type="text/javascript" src="js/Car.js"></script>
-    <script type="text/javascript" src="js/Score.js"></script>
-    <script type="text/javascript" src="js/Game.js"></script>
-    <script type="text/javascript" src="js/GameOver.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <div class="game-over hidden">
+        <button type="button" class="btn btn-success start-again">AGAIN?</button>
+    </div>
+
+    <script type="application/javascript" src="./js/Component.js"></script>
+    <script type="application/javascript" src="./js/Lives.js"></script>
+    <script type="application/javascript" src="./js/Player.js"></script>
+    <script type="application/javascript" src="./js/Crystal.js"></script>
+    <script type="application/javascript" src="./js/Sky.js"></script>
+    <script type="application/javascript" src="./js/Sun.js"></script>
+    <script type="application/javascript" src="./js/Clouds.js"></script>
+    <script type="application/javascript" src="./js/GrassFooter.js"></script>
+    <script type="application/javascript" src="./js/Road.js"></script>
+    <script type="application/javascript" src="./js/Car.js"></script>
+    <script type="application/javascript" src="./js/Score.js"></script>
+    <script type="application/javascript" src="./js/Game.js"></script>
+    <script type="application/javascript" src="./js/GameOver.js"></script>
+    <script type="application/javascript" src="./js/index.js"></script>
 </body>
 
 </html>
