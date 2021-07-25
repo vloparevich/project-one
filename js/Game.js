@@ -10,7 +10,7 @@ class Game {
         this.ladyBug = new Player(this, this.canvasWidth / 2, this.canvasHeight - 120, "./images/lady-bug.png", 3);
         this.road = new Road(this, 0, 25, "./images/road.jpg");
         this.grass = new GrassFooter(this, -5, 665, "./images/grass.png")
-        this.sky = new Sky(this, 0, 0, "./images/sky.jpg");
+        this.mountains = new Mountains(this, 0, 0, "./images/mountains.png");
         this.sun = new Sun(this, 800, 15, "./images/sun.png");
         this.clouds = new Clouds(this, 0, 10, "./images/cloud.png")
         this.gameOver = new GameOver(this, 0, 0, "./images/game-over.png")
@@ -23,6 +23,7 @@ class Game {
             new Car(this, this.canvasWidth, 515, false, "./images/car-right.png")
         ];
         this.crystals = [];
+        this.unloadedCrystals = [];
         this.isDied = false;
         this.gameOverSection = gameOverSection;
         this.gameStarted = false;
@@ -60,7 +61,7 @@ class Game {
     drawLoop() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
         this.road.drawComponent();
-        this.sky.drawComponent();
+        this.mountains.drawComponent();
         this.sun.sunMoving();
         this.ladyBug.drawComponent();
         this.clouds.cloudAnimation();
@@ -90,9 +91,9 @@ class Game {
         this.crystals.forEach((crystal, index) => {
             crystal.drawComponent();
             if (this.ladyBug.isCollidedObject(crystal)) {
-                this.ladyBug.height += 5
-                this.ladyBug.width += 5
-                this.crystals.splice(index, 1)
+                this.ladyBug.height += 5;
+                this.ladyBug.width += 5;
+                this.crystals.splice(index, 1);
                 this.score.tempScore += 1;
                 new Audio('sounds/eat-crystal.wav').play();
             }
@@ -103,6 +104,8 @@ class Game {
             this.ladyBug.height = this.ladyBug.img.height / 2.5;
             if (this.score.tempScore > 0) {
                 this.unloadingOnTheSun.play();
+                // const tempCrystal = this.crystals[0];
+                // tempCrystal.flyAway(this.ladyBug);
             }
             this.score.score += this.score.tempScore;
             this.score.tempScore = 0;
