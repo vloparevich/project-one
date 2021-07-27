@@ -14,8 +14,8 @@ class Game {
         this.sun = new Sun(this, 800, 15, "./images/sun.png");
         this.clouds = new Clouds(this, 0, 10, "./images/cloud.png")
         this.gameOver = new GameOver(this, 0, 0, "./images/game-over.png")
-        this.score = new Score(this, 10, 100, "");
-        this.lives = new Lives(this, this.canvas.width - 125, 100, 5, "");
+        this.score = new Score(this, 10, 735, "");
+        this.lives = new Lives(this, this.canvas.width - 150, 100, 5, "");
         this.cars = [
             new Car(this, 0, 175, true, "./images/car.png"),
             new Car(this, 0, 287, true, "./images/car.png"),
@@ -30,16 +30,16 @@ class Game {
     }
 
     init() {
-        this.backgroundAudio.addEventListener('ended', function () {
-            this.play();
-        }, false);
+        // this.backgroundAudio.addEventListener('ended', function () {
+        //     this.play();
+        // }, false);
 
-        this.mainThemeMusic.addEventListener('ended', function () {
-            this.play();
-        });
+        // this.mainThemeMusic.addEventListener('ended', function () {
+        //     this.play();
+        // });
 
-        this.mainThemeMusic.play();
-        this.backgroundAudio.play();
+        // this.mainThemeMusic.play();
+        // this.backgroundAudio.play();
         this.drawLoop();
         this.ladyBug.move();
     }

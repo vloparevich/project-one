@@ -6,12 +6,15 @@ class Score extends Component {
     }
 
     drawScore() {
+        this.that.context.fillStyle = "rgb(0,255,255)";
+        this.that.context.fillRect(this.x - 15, this.y - 35, 240, 100);
         this.that.context.fillStyle = "blue";
         this.that.context.font = "30px Arial"
         this.that.context.fillText(`SCORE: ${this.score}`, this.x, this.y);
     }
 
     drawTempScore() {
+
         this.that.context.fillStyle = "green";
         this.that.context.font = "30px Arial"
         this.that.context.fillText(`COLLECTED: ${this.tempScore}`, this.x, this.y + 50);
