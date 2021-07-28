@@ -14,7 +14,6 @@ class Score extends Component {
     }
 
     drawTempScore() {
-
         this.that.context.fillStyle = "green";
         this.that.context.font = "30px Arial"
         this.that.context.fillText(`COLLECTED: ${this.tempScore}`, this.x, this.y + 50);

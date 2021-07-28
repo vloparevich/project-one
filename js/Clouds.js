@@ -3,7 +3,7 @@ class Clouds extends Component {
         super(obj, x, y, imgSrc);
         this.width = this.img.width / 6;
         this.height = this.img.height * 0.15;
-        this.firstImageX = this.canvasWidth; //1200
+        this.firstImageX = this.canvasWidth;
         this.nextImageX = 0;
     }
 
