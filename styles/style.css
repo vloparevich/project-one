@@ -47,7 +47,6 @@
     justify-content: center;
 }
 
-
 .game-over {
     position: relative;
 }
@@ -59,6 +58,7 @@
     margin-top: 50px;
     position: absolute;
     top: -165px;
+    left: 600px;
 }
 
 .hidden {
@@ -74,5 +74,5 @@ video {
     border-radius: 0px 25px 25px 25px;
     position: absolute;
     left: 20px;
-    z-index: 3
+    z-index: 3;
 }
