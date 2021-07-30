@@ -30,16 +30,16 @@ class Game {
     }
 
     init() {
-        // this.backgroundAudio.addEventListener('ended', function () {
-        //     this.play();
-        // }, false);
+        this.backgroundAudio.addEventListener('ended', function () {
+            this.play();
+        }, false);
 
-        // this.mainThemeMusic.addEventListener('ended', function () {
-        //     this.play();
-        // });
+        this.mainThemeMusic.addEventListener('ended', function () {
+            this.play();
+        });
 
-        // this.mainThemeMusic.play();
-        // this.backgroundAudio.play();
+        this.mainThemeMusic.play();
+        this.backgroundAudio.play();
         this.drawLoop();
         this.ladyBug.move();
     }
@@ -104,8 +104,6 @@ class Game {
             this.ladyBug.height = this.ladyBug.img.height / 2.5;
             if (this.score.tempScore > 0) {
                 this.unloadingOnTheSun.play();
-                // const tempCrystal = this.crystals[0];
-                // tempCrystal.flyAway(this.ladyBug);
             }
             this.score.score += this.score.tempScore;
             this.score.tempScore = 0;
