@@ -117,7 +117,7 @@ class Game {
             window.requestAnimationFrame(() => this.drawLoop());
         } else {
             this.gameOver.drawComponent();
-            this.backgroundAudio.pause();
+            this.mainThemeMusic.pause();
             this.score.drawYourFinalScore();
             gameOverSection.classList.toggle("hidden");
         }
