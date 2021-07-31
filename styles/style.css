@@ -1,64 +1,103 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, #faffe9, #ebfadd, #d9f6d5, #c4f1cf, #acedcd, #99edc8, #84eec4, #69eec1, #58f3b0, #50f69b, #53f981, #5ffb62);
+    background-size: cover;
+}
+
+.main-section {
+    padding-top: 10%;
+    height: 100%;
+}
+
 #canvas {
-    border: 12px inset rgba(20, 233, 135, 0.66);
+    /* border: 12px inset rgba(20, 233, 135, 0.66); */
     border-radius: 0px 40px 40px 40px;
     display: none;
-    margin: auto 50px;
-    position: relative;
+    margin: auto;
 }
 
 .landing-page {
     display: flex;
-    align-items: center;
     justify-content: center;
-    border: 12px inset rgba(20, 233, 135, 0.66);
     border-radius: 0px 40px 40px 40px;
+    width: 1200px;
     height: 800px;
-    width: 1200;
     background-image: url("../images/landing-page.jpg");
     background-size: cover;
-    margin: auto 50px;
+    margin: 0 auto;
     position: relative;
 }
 
 .game-title {
     align-content: center;
-    width: 800px;
-    height: 600px;
+    width: 1100px;
+    height: 800px;
     background-image: url("../images/sunnylady.png");
     background-size: cover;
     position: absolute;
-    top: -20px;
-    left: 350px;
+    top: -50px;
+    left: 150px;
+}
+
+.sun-image {
+    align-content: center;
+    width: 550px;
+    height: 550px;
+    background-image: url("../images/sun.png");
+    background-size: cover;
+    position: absolute;
+    top: -150px;
+    left: -150px;
 }
 
 .btn.btn-success {
     font-size: 2rem;
-    border: 5px inset yellow;
     border-radius: 0px 25px 25px 25px;
     width: 150px;
+    height: 90px;
     position: absolute;
-    top: 450px;
-    left: 460px;
+    background-color: #eeeb37;
+    color: black;
+    top: 575px;
+    left: 540px;
+    animation: glowing 1300ms infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-color: #2ba805;
+        box-shadow: 0 0 5px #2ba805;
+    }
+
+    50% {
+        background-color: #49e819;
+        box-shadow: 0 0 20px #49e819;
+    }
+
+    100% {
+        background-color: #2ba805;
+        box-shadow: 0 0 5px #2ba805;
+    }
 }
 
 .game-over {
-    display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.game-over {
+    border-radius: 0px 40px 40px 40px;
+    margin: 0 auto;
+    width: 1200px;
+    height: 800px;
     position: relative;
 }
 
 .btn.start-again {
     font-size: 2rem;
-    border: 12px inset rgb(233, 63, 20);
-    border-radius: 0px 25px 25px 25px;
-    margin-top: 50px;
+    width: 15%;
+    border: 2px inset rgb(233, 63, 20);
+    border-radius: 0px 40px 40px 40px;
+    margin: 0 auto;
     position: absolute;
-    top: -165px;
-    left: 600px;
+    top: -100px;
 }
 
 .hidden {
@@ -68,7 +107,7 @@
 video {
     position: absolute;
     left: 100px;
-    top: 550px;
+    top: 585px;
     border-radius: 50px;
     border-radius: 0px 25px 25px 25px;
     position: absolute;

@@ -8,42 +8,46 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Lady Bug On The Road</title>
+    <title>Sunny Ladybug</title>
 </head>
 
 <body>
-    <div class="game-intro">
-        <br />
-    </div>
-    <div id="game-board" class="success">
-        <div class="landing-page">
-            <video width="312" height="205" autoplay muted loop id="myVideo">
-                <source src="./video/intro.mov" type="video/mp4">
-            </video>
-            <span class="game-title"></span>
-            <button type="button" class="btn btn-success">PLAY</button>
+    <div class="main-section">
+        <div id="game-board" class="success">
+            <div class="landing-page">
+                <video width="302" height="195" autoplay muted loop id="myVideo">
+                    <source src="./video/intro.mov" type="video/mp4">
+                </video>
+                <span class="sun-image"></span>
+                <span class="game-title"></span>
+                <button type="button" class="btn btn-success">PLAY</button>
+            </div>
+            <canvas id="canvas" width="1200" height="800"></canvas>
         </div>
-        <canvas id="canvas" width="1200" height="800"></canvas>
-    </div>
-    <div class="game-over hidden">
-        <button type="button" class="btn btn-success start-again">AGAIN?</button>
+        <div class="game-over hidden">
+            <div class="button">
+                <button type="button" class="btn btn-success start-again">AGAIN?</button>
+            </div>
+
+        </div>
+
+        <script type="application/javascript" src="./js/Component.js"></script>
+        <script type="application/javascript" src="./js/Lives.js"></script>
+        <script type="application/javascript" src="./js/Player.js"></script>
+        <script type="application/javascript" src="./js/Crystal.js"></script>
+        <script type="application/javascript" src="./js/Sky.js"></script>
+        <script type="application/javascript" src="./js/Mountains.js"></script>
+        <script type="application/javascript" src="./js/Sun.js"></script>
+        <script type="application/javascript" src="./js/Clouds.js"></script>
+        <script type="application/javascript" src="./js/GrassFooter.js"></script>
+        <script type="application/javascript" src="./js/Road.js"></script>
+        <script type="application/javascript" src="./js/Car.js"></script>
+        <script type="application/javascript" src="./js/Score.js"></script>
+        <script type="application/javascript" src="./js/Game.js"></script>
+        <script type="application/javascript" src="./js/GameOver.js"></script>
+        <script type="application/javascript" src="./js/index.js"></script>
     </div>
 
-    <script type="application/javascript" src="./js/Component.js"></script>
-    <script type="application/javascript" src="./js/Lives.js"></script>
-    <script type="application/javascript" src="./js/Player.js"></script>
-    <script type="application/javascript" src="./js/Crystal.js"></script>
-    <script type="application/javascript" src="./js/Sky.js"></script>
-    <script type="application/javascript" src="./js/Mountains.js"></script>
-    <script type="application/javascript" src="./js/Sun.js"></script>
-    <script type="application/javascript" src="./js/Clouds.js"></script>
-    <script type="application/javascript" src="./js/GrassFooter.js"></script>
-    <script type="application/javascript" src="./js/Road.js"></script>
-    <script type="application/javascript" src="./js/Car.js"></script>
-    <script type="application/javascript" src="./js/Score.js"></script>
-    <script type="application/javascript" src="./js/Game.js"></script>
-    <script type="application/javascript" src="./js/GameOver.js"></script>
-    <script type="application/javascript" src="./js/index.js"></script>
 </body>
 
 </html>
