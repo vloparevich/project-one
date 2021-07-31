@@ -18,3 +18,11 @@ startAgainBtn.addEventListener('click', () => {
     canvas.style.display = 'block';
     game.init();
 });
+
+// Fix the cache issue. Upon first loading ther eis no some UI elements
+window.onload = () => {
+    if (!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}
