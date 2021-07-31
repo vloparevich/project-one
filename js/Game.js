@@ -1,7 +1,7 @@
 class Game {
-    constructor(gameOverSection) {
-        this.canvas = document.getElementById("canvas");
-        this.context = this.canvas.getContext("2d");
+    constructor(gameOverSection, canvas, context) {
+        this.canvas = canvas;
+        this.context = context;
         this.canvasWidth = this.canvas.width;
         this.canvasHeight = this.canvas.height;
         this.backgroundAudio = new Audio('sounds/road-noise.wav');

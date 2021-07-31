@@ -3,8 +3,9 @@ const startAgainBtn = document.querySelector(".start-again");
 const landingPage = document.querySelector(".landing-page");
 const gameOverSection = document.querySelector(".game-over");
 const canvas = document.querySelector('#canvas');
+const context = canvas.getContext("2d");
 
-let game = new Game(gameOverSection);
+let game = new Game(gameOverSection, canvas, context);
 
 startGameBtn.addEventListener('click', () => {
     landingPage.classList.toggle("hidden");
