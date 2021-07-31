@@ -39,6 +39,7 @@ class Game {
         });
 
         this.mainThemeMusic.play();
+        this.mainThemeMusic.volume = 0.2;
         this.backgroundAudio.play();
         this.drawLoop();
         this.ladyBug.move();
