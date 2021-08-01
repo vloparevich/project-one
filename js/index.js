@@ -14,7 +14,7 @@ startGameBtn.addEventListener('click', () => {
 });
 
 startAgainBtn.addEventListener('click', () => {
-    game = new Game(gameOverSection);
+    game = new Game(gameOverSection, canvas, context);
     gameOverSection.classList.toggle("hidden");
     canvas.style.display = 'block';
     game.init();
